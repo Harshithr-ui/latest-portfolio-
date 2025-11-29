@@ -249,6 +249,74 @@ const App = () => {
                 </p>
               </div>
             </div>
+
+            {/* Educational Timeline */}
+            <div className="mt-24">
+              <div className="text-center mb-12">
+                <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Educational Journey</div>
+                <h2 className="font-serif text-4xl mb-6 text-stone-900">Timeline</h2>
+                <div className="w-16 h-1 bg-nobel-gold mx-auto"></div>
+              </div>
+
+              <div className="max-w-4xl mx-auto relative">
+                {/* Timeline Line */}
+                <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-nobel-gold via-stone-300 to-nobel-gold"></div>
+
+                {/* Timeline Items */}
+                <div className="space-y-12">
+                  {/* Birth */}
+                  <div className="relative flex items-center md:justify-start">
+                    <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-nobel-gold rounded-full border-4 border-white shadow-md transform -translate-x-1/2"></div>
+                    <div className="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                      <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="text-sm font-bold text-nobel-gold mb-2">November 20, 2005</div>
+                        <h3 className="font-serif text-xl text-stone-900 mb-2">Born</h3>
+                        <p className="text-stone-600 text-sm">The beginning of my journey</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* School */}
+                  <div className="relative flex items-center md:justify-end">
+                    <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-nobel-gold rounded-full border-4 border-white shadow-md transform -translate-x-1/2"></div>
+                    <div className="ml-20 md:ml-0 md:w-1/2 md:pl-12">
+                      <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="text-sm font-bold text-nobel-gold mb-2">2010 - 2022</div>
+                        <h3 className="font-serif text-xl text-stone-900 mb-2">Prarthana Central School</h3>
+                        <p className="text-stone-600 text-sm">Completed schooling and built foundational knowledge</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Pre-University */}
+                  <div className="relative flex items-center md:justify-start">
+                    <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-nobel-gold rounded-full border-4 border-white shadow-md transform -translate-x-1/2"></div>
+                    <div className="ml-20 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                      <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="text-sm font-bold text-nobel-gold mb-2">2022 - 2024</div>
+                        <h3 className="font-serif text-xl text-stone-900 mb-2">Alva's Pre-University College</h3>
+                        <p className="text-stone-600 text-sm">Pre-university education with focus on science and mathematics</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* University - Current */}
+                  <div className="relative flex items-center md:justify-end">
+                    <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-nobel-gold rounded-full border-4 border-white shadow-md transform -translate-x-1/2 animate-pulse"></div>
+                    <div className="ml-20 md:ml-0 md:w-1/2 md:pl-12">
+                      <div className="bg-gradient-to-br from-nobel-gold/10 to-stone-100 p-6 rounded-xl border-2 border-nobel-gold shadow-md hover:shadow-lg transition-shadow">
+                        <div className="text-sm font-bold text-nobel-gold mb-2">2024 - Present</div>
+                        <h3 className="font-serif text-xl text-stone-900 mb-2">Jain University</h3>
+                        <p className="text-stone-600 text-sm">Pursuing Bachelor of Engineering</p>
+                        <div className="mt-3 inline-block px-3 py-1 bg-nobel-gold text-white text-xs font-bold rounded-full">
+                          Currently Enrolled
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
