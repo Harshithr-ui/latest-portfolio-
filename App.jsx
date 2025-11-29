@@ -212,19 +212,42 @@ const App = () => {
       <main>
         {/* About */}
         <section id="about" className="py-24 bg-white">
-          <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4">
-              <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">About Me</div>
-              <h2 className="font-serif text-4xl mb-6 leading-tight text-stone-900">The Engineering Journey</h2>
-              <div className="w-16 h-1 bg-nobel-gold mb-6"></div>
+          <div className="container mx-auto px-6 md:px-12">
+            {/* Profile Photo Section */}
+            <div className="flex justify-center mb-16">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-nobel-gold to-stone-400 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
+                <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                  <img 
+                    src="/profile-photo.jpg" 
+                    alt="Harshith R" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full bg-gradient-to-br from-nobel-gold to-stone-600 flex items-center justify-center hidden">
+                    <span className="text-white font-serif font-bold text-6xl md:text-7xl">HR</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="md:col-span-8 text-lg text-stone-600 leading-relaxed space-y-6">
-              <p>
-                <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-nobel-gold">A</span>s a dedicated 2nd-year engineering student, I am constantly exploring the intersection of theoretical principles and practical application. My journey is defined by a curiosity for how things work and a drive to create systems that solve real-world problems.
-              </p>
-              <p>
-                I am actively building a strong foundation in computer science and core engineering concepts. From algorithms to system design, I strive for excellence in every project I undertake, believing that clean code and robust architecture are art forms in themselves.
-              </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+              <div className="md:col-span-4">
+                <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">About Me</div>
+                <h2 className="font-serif text-4xl mb-6 leading-tight text-stone-900">The Engineering Journey</h2>
+                <div className="w-16 h-1 bg-nobel-gold mb-6"></div>
+              </div>
+              <div className="md:col-span-8 text-lg text-stone-600 leading-relaxed space-y-6">
+                <p>
+                  <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-nobel-gold">A</span>s a dedicated 2nd-year engineering student, I am constantly exploring the intersection of theoretical principles and practical application. My journey is defined by a curiosity for how things work and a drive to create systems that solve real-world problems.
+                </p>
+                <p>
+                  I am actively building a strong foundation in computer science and core engineering concepts. From algorithms to system design, I strive for excellence in every project I undertake, believing that clean code and robust architecture are art forms in themselves.
+                </p>
+              </div>
             </div>
           </div>
         </section>
