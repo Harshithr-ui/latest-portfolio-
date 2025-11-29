@@ -15,7 +15,7 @@ export const SkillsDiagram = () => {
   
   const skills = [
     { id: 'cpp', label: 'C++', icon: Code },
-    { id: 'python', label: 'Python', icon: Terminal, certificate: 'source/UC-0a6c5d3e-dee9-47f1-b5bb-4f44b4f7d084 (2).pdf' },
+    { id: 'python', label: 'Python', icon: Terminal, certificate: '/python-certificate.pdf' },
     { id: 'react', label: 'React', icon: Globe },
     { id: 'node', label: 'Node.js', icon: Layers },
     { id: 'sql', label: 'SQL', icon: Database },
@@ -39,15 +39,24 @@ export const SkillsDiagram = () => {
           <div className="relative bg-white rounded-lg max-w-4xl w-full h-[95vh] sm:h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <div className="sticky top-0 z-10 bg-white border-b border-stone-200 p-3 sm:p-4 flex items-center justify-between">
               <h3 className="font-serif text-lg text-stone-900">Python Certificate</h3>
-              <button 
-                onClick={() => setShowCertificate(false)}
-                className="bg-stone-900 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-stone-800 transition-colors text-sm"
-              >
-                Close
-              </button>
+              <div className="flex gap-2">
+                <a 
+                  href="/python-certificate.pdf"
+                  download="Python-Certificate.pdf"
+                  className="bg-nobel-gold text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-nobel-gold/80 transition-colors text-sm"
+                >
+                  Download
+                </a>
+                <button 
+                  onClick={() => setShowCertificate(false)}
+                  className="bg-stone-900 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-stone-800 transition-colors text-sm"
+                >
+                  Close
+                </button>
+              </div>
             </div>
             <iframe 
-              src="source/UC-0a6c5d3e-dee9-47f1-b5bb-4f44b4f7d084 (2).pdf"
+              src="/python-certificate.pdf"
               className="w-full h-[calc(100%-60px)]"
               title="Python Certificate"
             />
