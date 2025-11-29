@@ -152,6 +152,7 @@ const App = () => {
           
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-stone-600">
             <a href="#about" onClick={scrollToSection('about')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">About</a>
+            <a href="#education" onClick={scrollToSection('education')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Education</a>
             <a href="#skills" onClick={scrollToSection('skills')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Skills</a>
             <a href="#projects" onClick={scrollToSection('projects')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Projects</a>
             <a href="#contact" onClick={scrollToSection('contact')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Contact</a>
@@ -174,6 +175,7 @@ const App = () => {
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-[#F9F8F4] flex flex-col items-center justify-center gap-8 text-xl font-serif animate-fade-in">
             <a href="#about" onClick={scrollToSection('about')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">About</a>
+            <a href="#education" onClick={scrollToSection('education')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Education</a>
             <a href="#skills" onClick={scrollToSection('skills')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Skills</a>
             <a href="#projects" onClick={scrollToSection('projects')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Projects</a>
             <a href="#contact" onClick={scrollToSection('contact')} className="hover:text-nobel-gold transition-colors cursor-pointer uppercase">Contact</a>
@@ -251,7 +253,7 @@ const App = () => {
             </div>
 
             {/* Educational Timeline */}
-            <div className="mt-24">
+            <div id="education" className="mt-24">
               <div className="text-center mb-12">
                 <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Educational Journey</div>
                 <h2 className="font-serif text-4xl mb-6 text-stone-900">Timeline</h2>
