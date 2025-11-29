@@ -35,17 +35,20 @@ export const SkillsDiagram = () => {
   return (
     <>
       {showCertificate && (
-        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setShowCertificate(false)}>
-          <div className="relative bg-white rounded-lg max-w-4xl w-full h-[90vh] overflow-hidden">
-            <button 
-              onClick={() => setShowCertificate(false)}
-              className="absolute top-4 right-4 z-10 bg-stone-900 text-white px-4 py-2 rounded-lg hover:bg-stone-800 transition-colors"
-            >
-              Close
-            </button>
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-2 sm:p-4" onClick={() => setShowCertificate(false)}>
+          <div className="relative bg-white rounded-lg max-w-4xl w-full h-[95vh] sm:h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 z-10 bg-white border-b border-stone-200 p-3 sm:p-4 flex items-center justify-between">
+              <h3 className="font-serif text-lg text-stone-900">Python Certificate</h3>
+              <button 
+                onClick={() => setShowCertificate(false)}
+                className="bg-stone-900 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg hover:bg-stone-800 transition-colors text-sm"
+              >
+                Close
+              </button>
+            </div>
             <iframe 
               src="source/UC-0a6c5d3e-dee9-47f1-b5bb-4f44b4f7d084 (2).pdf"
-              className="w-full h-full"
+              className="w-full h-[calc(100%-60px)]"
               title="Python Certificate"
             />
           </div>

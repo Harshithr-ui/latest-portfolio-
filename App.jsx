@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import { HeroScene, EngineeringAbstractScene } from './components/QuantumScene';
 import { SkillsDiagram, ProjectFlowDiagram, StatsDiagram } from './components/Diagrams';
+import LoadingScreen from './components/LoadingScreen';
 import { ArrowDown, Menu, X, BookOpen, Code, Terminal, Mail, Linkedin, Github, ExternalLink, Folder } from 'lucide-react';
 
 const ContactCard = ({ platform, handle, link, delay, icon: Icon }) => {
@@ -67,6 +68,7 @@ const ProjectCard = ({ title, description, tech, link, delay }) => {
 };
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -131,6 +133,10 @@ const App = () => {
     }
   ];
 
+  if (loading) {
+    return <LoadingScreen onLoadingComplete={() => setLoading(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-[#F9F8F4] text-stone-800 selection:bg-nobel-gold selection:text-white">
       
@@ -140,7 +146,7 @@ const App = () => {
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-10 h-10 bg-nobel-gold rounded-full flex items-center justify-center text-white font-serif font-bold text-xl shadow-sm pb-1">HR</div>
             <span className={`font-serif font-bold text-lg tracking-wide transition-opacity ${scrolled ? 'opacity-100' : 'opacity-0 md:opacity-100'}`}>
-               <span className="font-normal text-stone-500 text-sm"></span>
+              HARSHITH R <span className="font-normal text-stone-500 text-sm">PORTFOLIO</span>
             </span>
           </div>
           
@@ -182,11 +188,15 @@ const App = () => {
         <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(249,248,244,0.92)_0%,rgba(249,248,244,0.6)_50%,rgba(249,248,244,0.3)_100%)]" />
 
         <div className="relative z-10 container mx-auto px-6 text-center">
+          <div className="inline-block mb-4 px-3 py-1 border border-nobel-gold text-nobel-gold text-xs tracking-[0.2em] uppercase font-bold rounded-full backdrop-blur-sm bg-white/30">
+            Portfolio • 2024
+          </div>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-medium leading-tight md:leading-[0.9] mb-8 text-stone-900 drop-shadow-sm">
-            Harshith R <br/><span className="italic font-normal text-stone-600 text-2xl md:text-4xl block mt-6">Future AI Engineer & Tech Innovator</span>
+            Harshith R <br/><span className="italic font-normal text-stone-600 text-2xl md:text-4xl block mt-6">Engineering Student & Innovator</span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-stone-700 font-light leading-relaxed mb-12">
-AI Engineering Student @ Jain University. Turning algorithms into solutions, data into intelligence.          </p>
+            Pursuing 2nd Year Engineering. Building the future through code, design, and complex problem solving.
+          </p>
           
           <div className="flex justify-center">
              <a href="#about" onClick={scrollToSection('about')} className="group flex flex-col items-center gap-2 text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
@@ -210,10 +220,11 @@ AI Engineering Student @ Jain University. Turning algorithms into solutions, dat
             </div>
             <div className="md:col-span-8 text-lg text-stone-600 leading-relaxed space-y-6">
               <p>
-                <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-nobel-gold">A</span>s a second-year Artificial Intelligence Engineering student at Jain University, I am deeply committed to exploring the convergence of theoretical frameworks and practical implementation in the field of AI. My academic pursuit is characterized by an unwavering curiosity for intelligent systems and a dedication to developing innovative solutions that address complex real-world challenges.
+                <span className="text-5xl float-left mr-3 mt-[-8px] font-serif text-nobel-gold">A</span>s a dedicated 2nd-year engineering student, I am constantly exploring the intersection of theoretical principles and practical application. My journey is defined by a curiosity for how things work and a drive to create systems that solve real-world problems.
               </p>
               <p>
-I am systematically building expertise in artificial intelligence, machine learning, and fundamental engineering principles. From designing neural network architectures to implementing scalable intelligent systems, I maintain a rigorous standard of excellence in every endeavor. I firmly believe that elegant algorithms, efficient code, and well-architected systems represent the pinnacle of engineering craftsmanship.              </p>
+                I am actively building a strong foundation in computer science and core engineering concepts. From algorithms to system design, I strive for excellence in every project I undertake, believing that clean code and robust architecture are art forms in themselves.
+              </p>
             </div>
           </div>
         </section>
