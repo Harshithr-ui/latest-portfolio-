@@ -96,40 +96,25 @@ const App = () => {
 
   const projects = [
     {
-      title: "AI-Powered Chatbot",
-      description: "Developed an intelligent conversational AI using NLP techniques and machine learning to provide automated customer support with high accuracy.",
-      tech: ["Python", "TensorFlow", "Flask", "NLP"],
-      link: "#"
+      title: "Personal Portfolio Website",
+      description:
+        "Professional portfolio showcasing engineering projects and technical skills. Modern, responsive UI/UX with dynamic project showcase, live demo links, and an integrated contact section. Deployed on Vercel with CI, fast load times, and 99.9% uptime.",
+      tech: ["Next.js", "React", "JavaScript", "Tailwind CSS", "Vercel"],
+      link: "https://latest-portfolio-gray-six.vercel.app/"
     },
     {
-      title: "E-Commerce Platform",
-      description: "Built a full-stack online shopping platform with real-time inventory management, secure payment integration, and responsive design.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#"
+      title: "Route Optimizer System (In Progress)",
+      description:
+        "Graph-based route optimization using Dijkstra’s algorithm to compute shortest paths across 1000+ nodes and weighted edges. Integrates Gemini API for intelligent suggestions and real-time traffic analysis with interactive path visualization.",
+      tech: ["Python", "Dijkstra's Algorithm", "Data Structures", "Gemini API"],
+      link: null
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Created an interactive analytics dashboard for visualizing complex datasets with customizable charts and real-time data updates.",
-      tech: ["React", "D3.js", "Python", "FastAPI"],
-      link: "#"
-    },
-    {
-      title: "Task Management System",
-      description: "Designed a collaborative task tracking application with team management features, deadlines, and progress monitoring capabilities.",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      link: "#"
-    },
-    {
-      title: "Weather Forecast App",
-      description: "Developed a mobile-responsive weather application that provides accurate forecasts using external API integration and geolocation services.",
-      tech: ["JavaScript", "OpenWeather API", "CSS3"],
-      link: "#"
-    },
-    {
-      title: "Portfolio Generator",
-      description: "Created an automated portfolio builder that generates professional developer portfolios from GitHub data and customizable templates.",
-      tech: ["React", "GitHub API", "Vite"],
-      link: "#"
+      title: "Expense Tracker Application (In Progress)",
+      description:
+        "Web-based expense tracker for managing income and expenses with category-wise management. Interactive charts visualize spending patterns and monthly summaries. Persists data with local storage and delivers a responsive experience.",
+      tech: ["React", "JavaScript", "Chart.js", "Local Storage"],
+      link: null
     }
   ];
 
@@ -342,6 +327,12 @@ const App = () => {
                         <SkillsDiagram />
                     </div>
                 </div>
+
+                <div className="mt-10 text-center">
+                  <p className="text-base md:text-lg text-stone-400">
+                    Currently working on multiple projects involving API integration, real-time data processing, and cloud deployment.
+                  </p>
+                </div>
             </div>
         </section>
 
@@ -392,6 +383,12 @@ const App = () => {
                             My workflow emphasizes iterative testing and refinement. Whether it's a simple script or a complex web application, the goal is always efficient, clean, and bug-free execution.
                         </p>
                      </div>
+                </div>
+
+                <div className="mt-12 text-center">
+                  <p className="text-stone-400 text-sm">
+                    Currently working on multiple projects involving API integration, real-time data processing, and cloud deployment.
+                  </p>
                 </div>
             </div>
         </section>
